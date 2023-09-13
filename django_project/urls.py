@@ -8,10 +8,10 @@ urlpatterns = [
 
     # Local apps
     path("", include("pages.urls") ),
-    path("accounts/", include("accounts.urls")),
+  
 
     # User management
-    path("accounts/", include("django.contrib.auth.urls")),
+    path("accounts/", include("allauth.urls")),
     
 
 ]
