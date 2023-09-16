@@ -8,6 +8,7 @@ ENV PYTHONUNBUFFERED 1
 WORKDIR /code
 # Install dependencies
 COPY ./requirements.txt .
+RUN ls -al  # Debugging statement
 RUN pip install -r requirements.txt
 # Copy project
 COPY . .
