@@ -18,6 +18,7 @@ class BookDetailView(LoginRequiredMixin, DetailView):
     template_name = "books/book_detail.html"
     context_object_name = "book"
     login_url = "account_login"
+    queryset = Book.objects.all().prefetch_related('reviews__author',)
 
 class SearchResultsListView(ListView): # new
     model = Book
